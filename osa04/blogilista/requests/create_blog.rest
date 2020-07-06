@@ -1,0 +1,12 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3RVc2VyIiwiaWQiOiI1ZjAyZTQyZDQ1MTJlODc2MDRiOTcxZWMiLCJpYXQiOjE1OTQwMjU1MTN9.TsLxRIihbLWpjpMnzH25swQUwQMa9HALHwDGk6PKUks
+
+{
+    "title": "functional programming is fun!!!!!!",
+    "author": "Mattias Petter Johansson",
+    "url": "https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q",
+    "likes": "5",
+    "userId": "5efed7f3b7e444189a3d07c2"
+
+}
