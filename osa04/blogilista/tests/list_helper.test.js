@@ -88,7 +88,7 @@ describe('total likes', () => {
     })
 
 describe('favorite blog',() => {
-    test('when list has many blogs method gves the right favorite blog', () => {
+    test('when list has many blogs method gives the right favorite blog', () => {
         const result = listHelper.favoriteBlog(manyBlogs)
         expect(result).toEqual({
             title: 'Canonical string reduction',

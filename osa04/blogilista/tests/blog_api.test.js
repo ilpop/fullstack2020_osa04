@@ -20,7 +20,7 @@ describe('when there is initially some blogs saved ', () => {
     blogObject = new Blog(helper.initialBlogs[1])
         await blogObject.save()
     })
-    
+
     test('blogs are returned as json', async () => {
         await api
         .get('/api/blogs')
@@ -76,6 +76,7 @@ describe('when there is initially some blogs saved ', () => {
         })
     
     })
+
 
 test('id is defined and not "_id" ', async () => {
     const response = await helper.blogsInDB()

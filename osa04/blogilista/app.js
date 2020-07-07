@@ -13,6 +13,7 @@ const helper = require('./models/helper')
 const Blog = require('./models/blog')
 const User = require('./models/user')
 const bcrypt = require ('bcrypt')
+const { unknownEndPoint } = require('./utils/middleware')
 
 
 /*const beforeEach = (async () => {
@@ -36,18 +37,21 @@ mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology
         logger.error('error connection to MongoDB', error.message)
     })
 
-
-
-
-
-
 app.use(cors())
 app.use(express.json())
+
 app.use(middleware.requestLogger)
+
+
 
 app.use('/api/users', usersRouter)
 app.use('/api/login', loginRouter)
+
+app.use(middleware.tokenExtractor)
+
 app.use('/api/blogs', blogRouter)
+
+app.use(unknownEndPoint)
 
 
 module.exports = app
